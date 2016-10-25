@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.algonquincollege.pate0304.hsvcolorpicker.MainActivity">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/colorSwatch"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentStart="true"
+        android:height="200dp"
+        android:background="#000"
+        android:onClick="showHsvvalue"/>
+
+    <TextView
+        android:text="@string/txthue"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/hue"
+        android:layout_below="@+id/colorSwatch"
+        android:layout_alignParentStart="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/colorSwatch"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/hueVal"
+        tools:ignore="RtlHardcoded" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:id="@+id/hueBar"
+        android:background="@drawable/gradient"
+        android:layout_below="@+id/hue"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:text="@string/txtsaturation"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/saturation"
+        android:layout_below="@+id/hueBar"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/satVal"
+        android:layout_below="@+id/hueBar"
+        android:layout_centerHorizontal="true" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:id="@+id/saturationBar"
+        android:layout_below="@+id/saturation"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/gradientsaturation"
+        android:layout_height="60dp" />
+
+    <TextView
+        android:text="@string/txtvalue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:id="@+id/value"
+        android:layout_below="@+id/saturationBar" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/saturationBar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/valVal" />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:id="@+id/valueBar"
+        android:layout_below="@+id/value"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/gradientvalue"
+        android:layout_height="60dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/buttongroup1"
+            >
+
+            <Button
+                android:background="@android:color/black"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/blackButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#FF0000"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/redButton"
+                tools:ignore="ButtonStyle,RtlSymmetry"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#00FF00"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/limeButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#0000FF"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/blueButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#FFFF00"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/yellowButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#00FFFF"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/cyanButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#FF00FF"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/magentaButton"
+                tools:ignore="ButtonStyle,RtlHardcoded"
+                android:layout_marginEnd="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <Button
+                android:background="#C0C0C0"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/silverButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#808080"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/grayButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#800000"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/maroonButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#808000"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/oliveButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#008000"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/greenButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#800080"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/purpleButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#008080"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/tealButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+
+            <Button
+                android:background="#000080"
+                android:onClick="changeColor"
+                android:text=""
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:id="@+id/navyButton"
+                tools:ignore="ButtonStyle"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp" />
+        </LinearLayout>
+
+
+    </HorizontalScrollView>
+
+
+</RelativeLayout>

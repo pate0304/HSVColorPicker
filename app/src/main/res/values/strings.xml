@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HSV Color Picker</string>
+    <string name="action_about">About</string>
+    <string name="author">Jay Patel</string>
+    <string name="txthue">Hue</string>
+    <string name="txtsaturation">Saturation</string>
+    <string name="txtvalue">Value</string>
+    <string name="user">pate0304</string>
+    <string name="hueValue">%1d\u00B0</string>
+    <string name="satValue">%1d\u00B0</string>
+    <string name="valValue">%1d\u00B0</string>
+</resources>
