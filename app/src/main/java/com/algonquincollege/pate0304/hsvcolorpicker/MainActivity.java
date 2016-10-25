@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity implements Observer, SeekBar
              float a=mModel.getHue();
             float b=mModel.getSaturation();
             float c=mModel.getValue();
-            Toast.makeText(this, "HUE:"+a+"SATURATION:"+b+"VALUE:"+c, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "HUE: "+a+"\t\tSATURATION: "+b+"\t\tVALUE: "+c, Toast.LENGTH_SHORT).show();
         }
     }
 

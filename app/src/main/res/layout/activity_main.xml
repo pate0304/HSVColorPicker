@@ -46,7 +46,7 @@
         android:layout_below="@+id/hue"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_height="60dp" />
+        android:layout_height="40dp" />
 
     <TextView
         android:text="@string/txtsaturation"
@@ -62,15 +62,6 @@
         android:id="@+id/satVal"
         android:layout_below="@+id/hueBar"
         android:layout_centerHorizontal="true" />
-
-    <SeekBar
-        android:layout_width="wrap_content"
-        android:id="@+id/saturationBar"
-        android:layout_below="@+id/saturation"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:background="@drawable/gradientsaturation"
-        android:layout_height="60dp" />
 
     <TextView
         android:text="@string/txtvalue"
@@ -94,7 +85,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:background="@drawable/gradientvalue"
-        android:layout_height="60dp" />
+        android:layout_height="40dp" />
 
     <HorizontalScrollView
         android:layout_width="match_parent"
@@ -277,6 +268,15 @@
 
 
     </HorizontalScrollView>
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:id="@+id/saturationBar"
+        android:background="@drawable/gradientsaturation"
+        android:layout_below="@+id/saturation"
+        android:layout_alignParentStart="true"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
